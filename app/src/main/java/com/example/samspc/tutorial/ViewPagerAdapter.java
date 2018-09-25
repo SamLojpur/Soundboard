@@ -17,7 +17,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter{
         TabFragment tabFragment;
         tabFragment = new TabFragment();
         Bundle bundle = new Bundle();
-        //bundle.putInt("message", "Fragment :" + position);
+        bundle.putString("message", "Fragment :" + position);
         tabFragment.setArguments(bundle);
         return tabFragment;
     }
