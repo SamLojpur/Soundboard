@@ -5,8 +5,10 @@ import android.content.Context;
 import android.media.MediaPlayer;
 import android.media.MediaRecorder;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -16,7 +18,9 @@ import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    private Toolbar toolbar;
+    private ViewPager viewPager;
+    private ViewPagerAdapter adapter;
 
     private boolean permissionToRecordAccepted = false;
     private String [] permissions = {Manifest.permission.RECORD_AUDIO, Manifest.permission.WRITE_EXTERNAL_STORAGE};
@@ -27,23 +31,28 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-
-
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        final EditText num1Btn = (EditText) findViewById(R.id.num1);
-//        final EditText num2Btn = (EditText) findViewById(R.id.num2);
-//        final TextView sum = (TextView) findViewById(R.id.txt_sum);
-        path = getExternalCacheDir().getAbsolutePath()+"/test.mp4";
+
+        path = getExternalCacheDir().getAbsolutePath() + "/test.mp4";
         final Context context = this;
         isRecording = false;
 
         ActivityCompat.requestPermissions(this, permissions, 201);
+        //final Button recordBtn = (Button) findViewById(R.id.btn_record);
 
-        final Button recordBtn = (Button) findViewById(R.id.btn_record);
-        recordBtn.setOnClickListener(new View.OnClickListener(){
+        toolbar = (Toolbar) findViewById(R.id.toolBar);
+        setSupportActionBar(toolbar);
+
+        viewPager = (ViewPager) findViewById(R.id.pager);
+        adapter = new ViewPagerAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(adapter);
+
+    }
+
+
+       /* recordBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
 
@@ -108,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
                 investigate.start();
             }
         });
-        
+
         Button perception_checkBtn = (Button) findViewById(R.id.btn_perception_check);
         final MediaPlayer perception_check = MediaPlayer.create(this, R.raw.perception_check);
         perception_checkBtn.setOnClickListener(new View.OnClickListener(){
@@ -169,6 +178,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-    }
+    }*/
 
 }
