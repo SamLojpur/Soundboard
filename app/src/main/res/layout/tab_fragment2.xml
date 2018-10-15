@@ -37,14 +37,42 @@
                             android:layout_marginTop="35dp"
                             android:id="@+id/btn_record" />
 
+
                         <Button
-                            android:text="Tab 2!"
+                            android:text="Knick Knack"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_below="@+id/num2"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="35dp"
-                            android:id="@+id/btn_tab2" />
+                            android:id="@+id/btn_pattywhack" />
+
+                        <Button
+                            android:text="5 minutes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/num2"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="35dp"
+                            android:id="@+id/btn_5Minutes" />
+
+                        <Button
+                            android:text="Oh hallo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/num2"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="35dp"
+                            android:id="@+id/btn_hallo" />
+
+                        <Button
+                            android:text="Apple Socks"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/num2"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="35dp"
+                            android:id="@+id/btn_apple_socks" />
                 </LinearLayout>
         </ScrollView>
 
