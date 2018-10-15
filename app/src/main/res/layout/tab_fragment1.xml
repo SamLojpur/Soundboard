@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+        <TextView
+            android:text="HI GUYS ITS ME"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_display"
+            android:gravity="center"
+            />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                        <Button
+                            android:text="Play"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/btn_record"
+                            android:layout_alignLeft="@+id/btn_record"
+                            android:layout_alignStart="@+id/btn_record"
+                            android:layout_marginTop="35dp"
+                            android:id="@+id/btn_play" />
+                        <Button
+                            android:text="Record"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/num2"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="35dp"
+                            android:id="@+id/btn_record" />
+                        <Button
+                            android:text="Press In Case Of Emergency"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/num2"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="35dp"
+                            android:id="@+id/btn_emergency" />
+                        <Button
+                            android:text="Insight"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/num2"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="35dp"
+                            android:id="@+id/btn_insight" />
+                        <Button
+                            android:text="Investigate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/num2"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="35dp"
+                            android:id="@+id/btn_investigate" />
+                        <Button
+                            android:text="Perception Check"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/num2"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="35dp"
+                            android:id="@+id/btn_perception_check" />
+                        <Button
+                            android:text="Sneak Attack!"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/num2"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="35dp"
+                            android:id="@+id/btn_sneak_attack" />
+                        <Button
+                            android:text="Stealth"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/num2"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="35dp"
+                            android:id="@+id/btn_stealth" />
+                </LinearLayout>
+        </ScrollView>
+
+
+</LinearLayout>

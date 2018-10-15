@@ -1,9 +1,11 @@
 package com.example.samspc.tutorial;
 
 import android.Manifest;
+import android.app.ActionBar;
 import android.content.Context;
 import android.media.MediaPlayer;
 import android.media.MediaRecorder;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -16,11 +18,11 @@ import android.widget.Toast;
 
 import java.io.IOException;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
 
     private Toolbar toolbar;
     private ViewPager viewPager;
-    private ViewPagerAdapter adapter;
+    private PagerAdapter adapter;
 
     private boolean permissionToRecordAccepted = false;
     private String [] permissions = {Manifest.permission.RECORD_AUDIO, Manifest.permission.WRITE_EXTERNAL_STORAGE};
@@ -40,22 +42,23 @@ public class MainActivity extends AppCompatActivity {
         isRecording = false;
 
         ActivityCompat.requestPermissions(this, permissions, 201);
-        //final Button recordBtn = (Button) findViewById(R.id.btn_record);
 
-        toolbar = (Toolbar) findViewById(R.id.toolBar);
-        setSupportActionBar(toolbar);
+
 
         viewPager = (ViewPager) findViewById(R.id.pager);
-        adapter = new ViewPagerAdapter(getSupportFragmentManager());
+        adapter = new PagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(adapter);
 
-    }
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
+        tabLayout.setupWithViewPager(viewPager);
 
 
-       /* recordBtn.setOnClickListener(new View.OnClickListener(){
+
+
+        /*final Button recordBtn = (Button) findViewById(R.id.btn_record);
+        recordBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-
                 if (isRecording){
                     recordBtn.setText("Record");
                     isRecording=false;
@@ -65,11 +68,9 @@ public class MainActivity extends AppCompatActivity {
                     isRecording=true;
                     Toast.makeText(context, String.valueOf(isRecording), Toast.LENGTH_LONG).show();
                     startRecording();
-
                 }
             }
         });
-
         Button playBtn = (Button) findViewById(R.id.btn_play);
         playBtn.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -90,7 +91,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
         Button emergencyBtn = (Button) findViewById(R.id.btn_emergency);
         final MediaPlayer emergency = MediaPlayer.create(this, R.raw.emergency);
         emergencyBtn.setOnClickListener(new View.OnClickListener(){
@@ -99,7 +99,6 @@ public class MainActivity extends AppCompatActivity {
                 emergency.start();
             }
         });
-
         Button insightBtn = (Button) findViewById(R.id.btn_insight);
         final MediaPlayer insight = MediaPlayer.create(this, R.raw.insight);
         insightBtn.setOnClickListener(new View.OnClickListener(){
@@ -108,7 +107,6 @@ public class MainActivity extends AppCompatActivity {
                 insight.start();
             }
         });
-
         Button investigateBtn = (Button) findViewById(R.id.btn_investigate);
         final MediaPlayer investigate = MediaPlayer.create(this, R.raw.investigate);
         investigateBtn.setOnClickListener(new View.OnClickListener(){
@@ -126,7 +124,6 @@ public class MainActivity extends AppCompatActivity {
                 perception_check.start();
             }
         });
-
         Button sneak_attackBtn = (Button) findViewById(R.id.btn_sneak_attack);
         final MediaPlayer sneak_attack = MediaPlayer.create(this, R.raw.sneak_attack);
         sneak_attackBtn.setOnClickListener(new View.OnClickListener(){
@@ -135,7 +132,6 @@ public class MainActivity extends AppCompatActivity {
                 sneak_attack.start();
             }
         });
-
         Button stealthBtn = (Button) findViewById(R.id.btn_stealth);
         final MediaPlayer stealth = MediaPlayer.create(this, R.raw.stealth);
         stealthBtn.setOnClickListener(new View.OnClickListener(){
@@ -143,8 +139,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 stealth.start();
             }
-        });
-
+        });*/
 
 
 
@@ -178,6 +173,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-    }*/
+    }
+
+
 
 }

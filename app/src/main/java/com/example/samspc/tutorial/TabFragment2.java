@@ -6,26 +6,31 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
 /**
  * Created by User on 2/28/2017.
  */
 
-public class TabFragment extends Fragment {
+public class TabFragment2 extends Fragment {
     private TextView textView;
-    public TabFragment(){
+    public TabFragment2(){
 
 
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.tab_fragment,container,false);
-        textView = (TextView) view.findViewById(R.id.txt_display);
-        textView.setText(getArguments().getString("message"));
-
+        View view = inflater.inflate(R.layout.tab_fragment2,container,false);
+        //textView = (TextView) view.findViewById(R.id.txt_display);
+        //textView.setText(getArguments().getString("message"));
+        //textView.setText("hello2");
         return view;
     }
+
+
+
+
+
+
 }

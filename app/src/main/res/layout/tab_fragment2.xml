@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+        <TextView
+            android:text="HI GUYS ITS ME"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_display"
+            android:gravity="center"
+            />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                        <Button
+                            android:text="Play"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/btn_record"
+                            android:layout_alignLeft="@+id/btn_record"
+                            android:layout_alignStart="@+id/btn_record"
+                            android:layout_marginTop="35dp"
+                            android:id="@+id/btn_play" />
+                        <Button
+                            android:text="Record"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/num2"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="35dp"
+                            android:id="@+id/btn_record" />
+
+                        <Button
+                            android:text="Tab 2!"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/num2"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="35dp"
+                            android:id="@+id/btn_tab2" />
+                </LinearLayout>
+        </ScrollView>
+
+
+</LinearLayout>
