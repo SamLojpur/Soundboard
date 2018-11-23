@@ -22,11 +22,15 @@ import java.io.IOException;
  */
 
 public class TabFragment2 extends Fragment {
+    private final static int MAX_VOLUME = 100;
     Context context;
     private Boolean isRecording;
     private String path;
     MediaPlayer mPlayer;
     MediaRecorder recorder;
+
+
+
     private TextView textView;
     public TabFragment2(){
 
@@ -92,12 +96,14 @@ public class TabFragment2 extends Fragment {
         });
 
 
-        Button emergencyBtn = (Button) view.findViewById(R.id.btn_5Minutes);
-        final MediaPlayer emergency = MediaPlayer.create(this.context, R.raw.alex_5minutes);
-        emergencyBtn.setOnClickListener(new View.OnClickListener() {
+        Button alex5minutesBtn = (Button) view.findViewById(R.id.btn_5Minutes);
+        final MediaPlayer alex5minutesMP = MediaPlayer.create(this.context, R.raw.alex_5minutes);
+        final float volume = (float) (1 - (Math.log(MAX_VOLUME - 100) / Math.log(MAX_VOLUME)));
+        alex5minutesMP.setVolume(volume, volume);
+        alex5minutesBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                emergency.start();
+                alex5minutesMP.start();
             }
         });
         Button insightBtn = (Button) view.findViewById(R.id.btn_pattywhack);

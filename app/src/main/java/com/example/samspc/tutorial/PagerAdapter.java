@@ -38,6 +38,8 @@ public class PagerAdapter extends FragmentPagerAdapter{
                 return new TabFragment1();
             case 1:
                 return new TabFragment2();
+            case 2:
+                return new TabFragment3();
             default:
                 return null;
         }
@@ -53,6 +55,8 @@ public class PagerAdapter extends FragmentPagerAdapter{
                 return "wow";
             case 1:
                 return "wow2";
+            case 2:
+                return "program";
             default:
                 return null;
         }
@@ -62,6 +66,6 @@ public class PagerAdapter extends FragmentPagerAdapter{
 
     @Override
     public int getCount() {
-        return 2;
+        return 3;
     }
 }
